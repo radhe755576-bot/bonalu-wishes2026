@@ -1,71 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Bonalu</title>
+<div id="flowers"></div>
+
+<script>
+for(let i=0;i<50;i++){
+  let flower=document.createElement("div");
+  flower.innerHTML="🌸";
+  flower.style.position="fixed";
+  flower.style.left=Math.random()*100+"vw";
+  flower.style.top="-50px";
+  flower.style.fontSize=(20+Math.random()*20)+"px";
+  flower.style.animation=`fall ${3+Math.random()*5}s linear infinite`;
+  document.body.appendChild(flower);
+}
+</script>
 
 <style>
-body{
-    margin:0;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(135deg,#ff6a00,#ffcc00);
-    overflow:hidden;
-    font-family:Arial, sans-serif;
-}
-
-.container{
-    text-align:center;
-    perspective:1000px;
-}
-
-h1{
-    font-size:80px;
-    color:#fff;
-    text-transform:uppercase;
-    text-shadow:
-        3px 3px 0 #d35400,
-        6px 6px 0 #a04000,
-        9px 9px 20px rgba(0,0,0,0.5);
-    animation:rotate3d 5s infinite alternate;
-}
-
-p{
-    color:white;
-    font-size:24px;
-    margin-top:20px;
-}
-
-@keyframes rotate3d{
-    from{
-        transform:rotateY(-20deg) rotateX(10deg);
-    }
-    to{
-        transform:rotateY(20deg) rotateX(-10deg);
-    }
-}
-
-.lamp{
-    font-size:70px;
-    animation:float 2s infinite ease-in-out;
-}
-
-@keyframes float{
-    0%,100%{transform:translateY(0);}
-    50%{transform:translateY(-20px);}
+@keyframes fall{
+  from{
+    transform:translateY(-100px) rotate(0deg);
+  }
+  to{
+    transform:translateY(110vh) rotate(360deg);
+  }
 }
 </style>
-</head>
-<body>
 
-<div class="container">
-    <div class="lamp">🪔</div>
-    <h1>Happy Bonalu</h1>
-    <p>May Goddess Mahankali Bless You & Your Family</p>
+<div id="loader">
+  <h1>🌺 Bonalu Wishes 2026 🌺</h1>
 </div>
 
-</body>
-</html>
+<style>
+#loader{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:black;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:40px;
+z-index:9999;
+}
+</style>
+
+<script>
+setTimeout(()=>{
+document.getElementById("loader").style.display="none";
+},4000);
+</script>
