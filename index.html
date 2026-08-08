@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Bonalu</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ff6a00,#ffcc00);
+    overflow:hidden;
+    font-family:Arial, sans-serif;
+}
+
+.container{
+    text-align:center;
+    perspective:1000px;
+}
+
+h1{
+    font-size:80px;
+    color:#fff;
+    text-transform:uppercase;
+    text-shadow:
+        3px 3px 0 #d35400,
+        6px 6px 0 #a04000,
+        9px 9px 20px rgba(0,0,0,0.5);
+    animation:rotate3d 5s infinite alternate;
+}
+
+p{
+    color:white;
+    font-size:24px;
+    margin-top:20px;
+}
+
+@keyframes rotate3d{
+    from{
+        transform:rotateY(-20deg) rotateX(10deg);
+    }
+    to{
+        transform:rotateY(20deg) rotateX(-10deg);
+    }
+}
+
+.lamp{
+    font-size:70px;
+    animation:float 2s infinite ease-in-out;
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-20px);}
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="lamp">🪔</div>
+    <h1>Happy Bonalu</h1>
+    <p>May Goddess Mahankali Bless You & Your Family</p>
+</div>
+
+</body>
+</html>
